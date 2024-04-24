@@ -13,13 +13,13 @@ export default function HorizontalBarDemo() {
     );
     const surfaceBorder = documentStyle.getPropertyValue('--surface-border');
     const data = {
-      labels: ['January is a month in the calender', 'February', 'March', 'April', 'May', 'June', 'July'],
+      labels: ['January is a month in the calender', 'February', 'March', 'April', 'May', 'June', 'July', 'January is a month in the calender', 'February', 'March', 'April', 'May', 'June', 'July'],
       datasets: [
         {
           label: 'My First dataset',
           backgroundColor: documentStyle.getPropertyValue('--yellow-500'),
           borderColor: documentStyle.getPropertyValue('--yellow-500'),
-          data: [65, 59, 80, 81, 56, 55, 40],
+          data: [65, 59, 80, 81, 56, 55, 40, 65, 59, 80, 81, 56, 55, 40],
         },
       ],
     };

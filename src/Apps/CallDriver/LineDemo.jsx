@@ -1,10 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
 import { Chart } from 'primereact/chart';
+import { setDateRange } from './Redux/actions';
+import { connect } from 'react-redux';
 
-export default function LineDemo() {
+const LineDemo = ({dateRange})  =>{
     const [chartData, setChartData] = useState({});
     const [chartOptions, setChartOptions] = useState({});
+    console.log(dateRange, 'ddddrange from redux');
 
     useEffect(() => {
         const documentStyle = getComputedStyle(document.documentElement);
@@ -78,4 +81,11 @@ export default function LineDemo() {
         </div>
     )
 }
+
+const mapStateToProps =  (state) => ({
+    dateRange: state.dateRange
+});
+
+export default connect(mapStateToProps)(LineDemo);
         
+
